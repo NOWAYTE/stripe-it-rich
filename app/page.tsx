@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import CheckoutPage from '@/componnents/CheckoutPage';
+import CheckoutPage from "@/components/CheckoutPage";
 import convertCurrency from '@/lib/convertCurrency'
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -34,6 +34,7 @@ export default function Home() {
         currency: "usd"
       }}
       >
+        <CheckoutPage amount={amount} />
 
       </Elements>
     </main>
